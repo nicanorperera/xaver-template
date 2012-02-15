@@ -1,0 +1,9 @@
+<%- clase = nil if clase.nil? -%>
+
+<%= content_tag :article, :id => "elementos_#{usuario.id}", :class => clase.presence || cycle(:impar, :par, :name => :listado) do %>
+  <%= link_to usuario.username, edit_admin_usuario_path(usuario) %>
+  <aside>
+    <%= link_to "Editar", edit_admin_usuario_path(usuario) if can? :update, usuario %>
+    <%= link_to "Eliminar", admin_usuario_path(usuario), :method => :delete, :confirm => t("confirmacion"), :remote => true if can? :destroy, usuario %>
+  </aside>
+<%- end -%>

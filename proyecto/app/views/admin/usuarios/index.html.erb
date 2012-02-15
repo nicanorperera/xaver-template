@@ -1,0 +1,9 @@
+<h1>Usuarios</h1>
+<p>Se listan a continuación los usuarios que posee el sitio.</p>
+<nav>
+  <%= link_to "Agregar usuario", new_admin_usuario_path %>
+</nav>
+<%= content_tag :section, :id => :listado, :class => :listado do %>
+  <%= render "header" %>
+  <%= render @usuarios %>
+<%- end -%>

@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: <%= app_name %>
+  username: postgres
+  password: 123456
+

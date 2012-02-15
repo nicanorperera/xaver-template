@@ -1,0 +1,15 @@
+# -*- encoding : utf-8 -*-
+<%= @app_name.capitalize %>::Application.routes.draw do
+  
+  namespace :admin do
+    resources :usuarios, :except => :show
+  end 
+ 
+  resources :sesiones, :only => [:index, :new, :create, :destroy]
+
+  match :login, :to => 'sesiones#new', :as => :login
+  match :logout, :to => 'sesiones#destroy', :as => :logout
+  
+  root :to => 'sesiones#new'
+  
+end

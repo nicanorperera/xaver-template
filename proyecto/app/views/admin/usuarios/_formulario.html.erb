@@ -1,0 +1,11 @@
+<%- opciones = { :class => :normal, :autocomplete => "off" } -%>
+<%- remote = false if remote.nil? -%>
+
+<%= simple_form_for usuario, :url => url, :remote => remote, :html => opciones do |f| %>
+  <%= f.input :username, :autofocus => true, :disabled => (usuario.username.present? && !usuario.new_record?) %>
+  <%= f.input :rol, :as => :select, :collection => current_user.roles_que_puede_crear if can?(:manage, Usuario) && usuario.new_record? %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+  <%= f.button :submit, :name => nil, :disable_with => t("espere") %>
+<%- end -%>

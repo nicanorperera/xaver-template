@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Iniciar sesión</title>
+    <%= tag :meta, :name => :author, :content => "Xaver" %>
+    <%= tag :meta, :name => :lang, :content => :es %>
+    <%= stylesheet_link_tag :login %>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag %>
+  </head>
+  <body>
+
+    <div class="container">
+      <%= content_tag :section, render("application/flash", :flash => flash), :id => :flash %>
+
+      <section class="login">
+        <h1>Iniciar sesión</h1>
+        <p>Por favor ingrese su usuario y contraseña para iniciar sesión.</p>
+        <%= simple_form_for @usuario, :url => sesiones_path do |f| %>
+          <%= f.input :username, :autofocus => true %>
+          <%= f.input :password %>
+          <%= f.button :submit, "Iniciar sesión", :disable_with => t("espere") %>
+        <%- end -%>
+      </section>
+    </div>
+
+  </body>
+</html>

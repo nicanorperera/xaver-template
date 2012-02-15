@@ -1,0 +1,3 @@
+<%- for id, mensaje in flash -%>
+  <%= content_tag :article, content_tag(:div, mensaje.html_safe), :class => id %>
+<%- end -%>

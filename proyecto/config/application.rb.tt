@@ -1,0 +1,27 @@
+# -*- encoding : utf-8 -*-
+require File.expand_path('../boot', __FILE__)
+
+require 'rails/all'
+
+if defined?(Bundler)
+  Bundler.require(*Rails.groups(:assets => %w(development test)))
+end
+
+module <%= @app_name.capitalize %>
+  class Application < Rails::Application
+   
+    config.autoload_paths += %W(#{config.root}/lib)
+    config.time_zone = 'Buenos Aires'
+    config.i18n.default_locale = :es
+    config.encoding = "utf-8"
+
+    # Configure sensitive parameters which will be filtered from the log file.
+    config.filter_parameters += [:password, :password_confirmation]
+    config.assets.enabled = true
+    config.assets.version = '1.0'
+    
+    # Se configura una inserción de middleware para utilizar Dragonfly con el servidor Amazon S3 para alojar allí las imágenes.
+    config.middleware.insert 0, 'Dragonfly::Middleware', :images
+    
+  end
+end

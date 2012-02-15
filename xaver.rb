@@ -1,4 +1,10 @@
-require File.join(File.dirname(__FILE__), 'core.rb')
+#require File.join(File.dirname(__FILE__), 'core.rb')
+
+def dirname; File.dirname(__FILE__); end
+
+def local_path(name)
+  File.join dirname, "#{name}"
+end
 
 remove_file "Gemfile"
 remove_file "README"
@@ -17,7 +23,7 @@ remove_file "config/routes.rb"
 remove_file "public/index.html"
 remove_file "public/robots.txt"
 
-@url_name = corroborar("Escriba la URL del sitio:")
+@url_name = ask("Escriba la URL del sitio:")
 
 # Copia Recursivamente todos los archivos de la carpeta proyecto.
 directory local_path("proyecto"), "../#{app_name}"

@@ -1,7 +1,7 @@
 #require File.join(File.dirname(__FILE__), 'core.rb')
 
 def dirname; File.dirname(__FILE__); end
-@raiz = File.expand_path((File.join(File.dirname(__FILE__)))
+@raiz = File.expand_path(File.join(File.dirname(__FILE__)))
 @proyecto = File.join(@raiz, 'proyecto')
 @archivos = File.join(@raiz, 'archivos')
 

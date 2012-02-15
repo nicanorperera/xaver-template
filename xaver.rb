@@ -1,6 +1,9 @@
 #require File.join(File.dirname(__FILE__), 'core.rb')
 
 def dirname; File.dirname(__FILE__); end
+@raiz = File.expand_path((File.join(File.dirname(__FILE__)))
+@proyecto = File.join(@raiz, 'proyecto')
+@archivos = File.join(@raiz, 'archivos')
 
 def local_path(name)
   File.join dirname, "#{name}"
@@ -26,7 +29,7 @@ remove_file "public/robots.txt"
 @url_name = ask("Escriba la URL del sitio:")
 
 # Copia Recursivamente todos los archivos de la carpeta proyecto.
-directory local_path("proyecto"), "../#{app_name}"
+directory @proyecto, "../#{app_name}"
 
 # - Gemfile
 # - push.sh
@@ -78,7 +81,7 @@ generate 'sorcery:install --model Usuario'
 remove_file 'app/models/usuario.rb'
 
 # Modifica el modelo 'Usuario'
-copy_file local_path('archivos/usuario.rb'), 'app/models/usuario.rb'
+copy_file File.join(@archivo, 'usuario.rb'), 'app/models/usuario.rb'
 
 # Crea Migracion para agregar Rol a Usuario
 generate(:migration, "AddRolToUsuarios rol:string")

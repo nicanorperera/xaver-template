@@ -33,7 +33,9 @@
     </div>
   </nav>
 
-  <%= content_tag :section, render("application/flash", :flash => flash), :id => :flash %>
+  <section id ="flash">
+    <%= mensajes_flash %>
+  </section>
 
   <div class="container">
     <%= yield %>

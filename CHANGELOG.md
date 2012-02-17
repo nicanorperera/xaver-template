@@ -24,3 +24,7 @@
 * Eliminada ruta root
 * Agregada ruta admin_root_path
 * Agregado Panel de Administracion
+
+## v0.1.1
+
+* Agregada ruta root para evitar errores de ruteo.

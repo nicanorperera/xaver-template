@@ -28,3 +28,7 @@
 ## v0.1.1
 
 * Agregada ruta root para evitar errores de ruteo.
+
+## v0.1.2
+
+* Eliminados Archivos Innecesarios.

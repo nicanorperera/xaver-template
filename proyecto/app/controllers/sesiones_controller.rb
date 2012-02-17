@@ -3,8 +3,7 @@ class SesionesController < ApplicationController
   layout false
 
   def index
-    # Cambiar root_path por otro Path.
-    redirect_to (logged_in? ? root_path : root_path), notice: notice, alert: alert
+    redirect_to (logged_in? ? admin_root_path : login_path), notice: notice, alert: alert
   end
 
   def new

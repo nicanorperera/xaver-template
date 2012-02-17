@@ -1,18 +1,19 @@
 # Xaver-Template
 
-Template de Aplicacion Adaptado a las necesidades de Xaver
+Template de Aplicacion adaptado a las necesidades de Xaver
 
-## Copia Recursivamente los siguientes archivos.
+Versión actual: 0.1.0
+
+## Funcionalidad
+
+### Genera los siguientes archivos.
 
 * Gemfile
 * push.sh
 
 * app/assets/javascripts/*
 * app/assets/stylesheets/*
-* app/controllers/application_controller.rb
-* app/controllers/sesiones_controller.rb
-* app/controllers/admin/admin_controller.rb
-* app/controllers/admin/usuarios_controller.rb
+* app/controllers/*
 * app/models/ability.rb
 
 * app/views/application/_slide.html.erb
@@ -23,25 +24,32 @@ Template de Aplicacion Adaptado a las necesidades de Xaver
 
 * config/database.yml
 * config/routes
-* config/application.rb (Como Template)
+* config/application.rb
 * config/environments/production
-* config/initializers/dragonfly.rb
-* config/initializers/inflections.rb
+* config/initializers/*
 * config/locales/es.yml
 
 * lib/sortable
 * lib/xexcepciones
-
 * lib/tasks/crear_usuarios.rake
+* vendor/assets/*
 
-* vendor/assets/images/*
-* vendor/assets/javascripts/*
-* vendor/assets/stylesheets/*
+### Instala gemas
+
+### Configura las siguientes gemas
+
+* sorcery
+* simple_form
+* dragonfly
+
+### Crea y Migra las Bases de Datos
+
+### Sube apliación a Heroku
 
 ## Uso
 
-Bajar el template. 
-$ rails new nombre_aplicacion -m template/xaver.rb
+* Bajar el template. 
+* Comando: `rails new nombre_aplicacion -m template/xaver.rb`
 
 
 

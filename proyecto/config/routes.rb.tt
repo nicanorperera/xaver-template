@@ -2,6 +2,7 @@
 <%= @app_name.capitalize %>::Application.routes.draw do
   
   namespace :admin do
+    root :to => 'admin#admin'
     resources :usuarios, :except => :show
   end 
  
@@ -9,7 +10,5 @@
 
   match :login, :to => 'sesiones#new', :as => :login
   match :logout, :to => 'sesiones#destroy', :as => :logout
-  
-  root :to => 'sesiones#new'
   
 end

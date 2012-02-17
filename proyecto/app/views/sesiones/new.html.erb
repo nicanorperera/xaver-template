@@ -11,7 +11,9 @@
   <body>
 
     <div class="container">
-      <%= content_tag :section, render("application/flash", :flash => flash), :id => :flash %>
+      <section id ="flash">
+        <%= mensajes_flash %>
+      </section>
 
       <section class="login">
         <h1>Iniciar sesión</h1>

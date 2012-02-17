@@ -37,9 +37,9 @@ generate 'simple_form:install'
 
 # Instala sorcery con modelo 'Usuario'
 generate 'sorcery:install --model Usuario'
-remove_file 'app/models/usuario.rb'
 
 # Modifica el modelo 'Usuario'
+remove_file 'app/models/usuario.rb'
 copy_file File.join(@raiz, 'archivos', 'usuario.rb'), 'app/models/usuario.rb'
 
 # Crea Migracion para agregar Rol a Usuario
@@ -52,5 +52,5 @@ rake 'cargar:usuarios'
 
 # Subir aplicación a Heroku y Configurar.
 if yes? 'Desea subir aplicacion a Heroku? (y/n)'
-  apply 'heroku.rb'
+  apply File.join( @raiz, 'heroku.rb' )
 end

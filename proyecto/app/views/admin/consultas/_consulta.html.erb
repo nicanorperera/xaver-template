@@ -1,0 +1,8 @@
+<%- clase = nil if clase.nil? -%>
+
+<%= content_tag :article, :id => "elementos_#{consulta.id}", :class => clase.presence || cycle(:impar, :par, :name => :listado) do %>
+  <%= link_to "#{l consulta.created_at} | #{consulta.nombre_completo}", admin_consulta_path(consulta) %>
+  <aside>
+    <%= link_to "Eliminar", admin_consulta_path(consulta), :method => :delete, :confirm => t("confirmacion"), :remote => true %>
+  </aside>
+<%- end -%>

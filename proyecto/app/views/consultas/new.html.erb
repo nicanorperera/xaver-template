@@ -1,0 +1,12 @@
+<h1>Contacto</h1>
+
+<%= simple_form_for @consulta do |f| %>
+  <%= f.input :nombre, :autofocus => true %>
+  <%= f.input :apellido %>
+  <%= f.input :telefono %>
+  <%= f.input :email %>
+  <%= f.input :direccion %>
+  <%= f.input :localidad %>
+  <%= f.input :mensaje %>
+  <%= f.button :submit, :disable_with => t("espere") %>
+<%- end -%>

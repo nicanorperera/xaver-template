@@ -4,10 +4,13 @@
   namespace :admin do
     root :to => 'admin#admin'
     resources :usuarios, :except => :show
+    resources :consultas, :only => [:index, :show, :destroy]
   end 
  
   resources :sesiones, :only => [:index, :new, :create, :destroy]
-
+  resources :consultas, :only => :create
+ 
+  match :contacto, :to => 'consultas#new', :as => :contacto
   match :login, :to => 'sesiones#new', :as => :login
   match :logout, :to => 'sesiones#destroy', :as => :logout
 

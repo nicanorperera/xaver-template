@@ -2,7 +2,7 @@
 
 Template de Aplicacion adaptado a las necesidades de Xaver
 
-Versión actual: 0.1.2
+Versión actual: 0.2.0
 
 ## Funcionalidad
 

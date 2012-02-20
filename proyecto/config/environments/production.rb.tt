@@ -64,4 +64,32 @@
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  config.middleware.use ExceptionNotifier,
+    sender_address: 'info@xaver.com.ar',
+    exception_recipients: 'errores@xaver.com.ar',
+    ignore_exceptions: ExceptionNotifier.default_ignore_exceptions
+
+  config.action_mailer.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com'
+  }
+
+  config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.default_url_options = { :host => APP_CONFIG[:dominio] }
+  
+  # Se configura un middleware utilizando Rack::Rewrite para redireccionar al dominio principal de la aplicación.
+  #
+  config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+    # Se realiza una redirección 301 (moved permanently) al root_url del dominio seteado en la configuración si:
+    r301 %r{.*}, "http://#{APP_CONFIG[:dominio]}$&", :if => Proc.new {|env|
+      # El entorno es "production" y la url no es el dominio principal de la aplicación.
+      env['SERVER_NAME'] != APP_CONFIG[:dominio]
+    }
+  end
 end

@@ -2,23 +2,23 @@
 
 ## v0.0.1
 
-* Release Inicial
+### Release Inicial
 
 ## v0.0.2
 
-* Refactoring Mensajes Flash
+### Refactoring Mensajes Flash
 
 ## v0.0.3
 
-* Varios cambios menores.
+### Varios cambios menores.
 
 ## v0.0.4
 
-* Mensajes Flash en /login
+### Mensajes Flash en /login
 
 ## v0.1.0
 
-* Nuevo Numero de Version
+### Panel de Administración
 * Documentacion Mejorada
 * Nuevo Formato de Changelog (.md)
 * Eliminada ruta root
@@ -27,8 +27,15 @@
 
 ## v0.1.1
 
-* Agregada ruta root para evitar errores de ruteo.
+### Agregada ruta root para evitar errores de ruteo.
 
 ## v0.1.2
 
-* Eliminados Archivos Innecesarios.
+### Eliminados Archivos Innecesarios.
+
+## v0.2.0
+
+### Agregado Middleware
+*Archivo de Configuraciòn
+*Cambios en environment/production.rb
+*Limpiar y borrar Application Controller

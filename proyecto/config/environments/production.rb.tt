@@ -81,7 +81,7 @@
 
   config.action_mailer.delivery_method = :smtp
   
-  config.action_mailer.default_url_options = { :host => APP_CONFIG[:dominio] }
+  config.action_mailer.default_url_options = { :host => '<%= @url_name %>' }
   
   # Se configura un middleware utilizando Rack::Rewrite para redireccionar al dominio principal de la aplicación.
   #

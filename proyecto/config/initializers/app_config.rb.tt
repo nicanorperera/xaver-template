@@ -1,3 +1,4 @@
 APP_CONFIG = {
-  :dominio => '<%= @url_name %>'
+  :dominio =>'<%= app_name %>.herokuapp.com'
+  # :dominio => '<%= @url_name %>'
 }

@@ -1,4 +1,4 @@
-# Versión Release Inicial
+# Versión 0.0: Release Inicial
 
 * v0.0.1: Release Inicial
 * v0.0.2: Refactoring Mensajes Flash

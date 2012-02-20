@@ -35,7 +35,7 @@ gem 'dragonfly'
 gem 'fog'
 gem 'rack-cache', require: 'rack/cache'
 gem 'RedCloth'
-
+gem 'rack-rewrite'
 
 
 

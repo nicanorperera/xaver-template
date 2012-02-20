@@ -30,6 +30,7 @@
   <nav id="nav">
     <div>
       <%= link_to "Usuarios", admin_usuarios_path if can? :index, Usuario %>
+      <%= link_to "Consultas", admin_consultas_path if can? :index, Consulta %>
     </div>
   </nav>
 

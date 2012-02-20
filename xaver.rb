@@ -32,7 +32,7 @@ rake 'db:create', :env => 'development'
 rake 'db:migrate'
 
 # Genera Migración de Consulta
-generate(:model, "consulta", "nombre", "apellido", "telefono", "email", "direcion", "localidad", "mensaje:text", "--skip")
+generate(:model, "consulta", "nombre", "apellido", "telefono", "email", "direccion", "localidad", "mensaje:text", "--skip")
 
 # Instala Simple_form: 
 generate 'simple_form:install'

@@ -1,4 +1,6 @@
 APP_CONFIG = {
-  :dominio =>'<%= app_name %>.herokuapp.com'
-  # :dominio => '<%= @url_name %>'
+  :dominio =>'<%= app_name %>.herokuapp.com',
+  # :dominio => '<%= @url_name %>',
+  # :access_key_id =>'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+  # :secret_access_key => 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
 }

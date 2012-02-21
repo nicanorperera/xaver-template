@@ -1,0 +1,25 @@
+<h1>Fotos de <%= @propietario %></h1>
+<p>Se listan a continuación las fotos que posee <%= @propietario %>.</p>
+<nav>
+  <%= link_to "Mostrar formulario", "#mostrar-formulario", :class => :"mostrar-formulario" %>
+  <%= link_to "Agregar foto", "#agregar-foto", :class => :"agregar-foto" %>
+  <%= link_to "Edición masiva", admin_polymorphic_path(@propietario, :fotos, :editar) if @fotos.any? %>
+  <%= link_to "Editar #{@propietario}", edit_admin_polymorphic_path(@propietario) %>
+</nav>
+<%= render "formulario_creacion", :propietario => @propietario, :url => admin_polymorphic_path(@propietario) %>
+
+<%= content_tag :section, :class => :imagen do %>
+  <%= render "header" %>
+  <%= content_tag :section, :class => :ordenable do %>
+    <%= render @fotos %>
+    <%= hidden_field_tag :url, admin_polymorphic_path(@propietario, :fotos, :reordenar), :class => :url %>
+  <%- end -%>
+<%- end -%>
+
+<script type="text/javascript">
+  jQuery(function(){
+    $(".mostrar-formulario").text("Ocultar formulario");
+    $(".agregar-foto").fadeIn(250);
+    $("form.mini").slideDown();
+  });
+</script>

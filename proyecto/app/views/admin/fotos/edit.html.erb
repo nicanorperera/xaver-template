@@ -1,0 +1,11 @@
+<h1>Editar foto</h1>
+<nav>
+  <%= link_to "Administrar fotos", admin_polymorphic_path(@foto.propietario, :fotos) %>
+</nav>
+<%= simple_form_for @foto, :url => admin_foto_path(@foto), :html => { :class => :normal } do |f| %>
+  <article class="foto">
+    <%= foto @foto, "237x177", "#c" %>
+    <%= f.input :titulo, :autofocus => true %>
+  </article>
+  <%= f.button :submit, :disable_with => t("espere") %>
+<%- end -%>

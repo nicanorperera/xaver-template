@@ -1,0 +1,7 @@
+<article class="foto">
+  <%= foto foto, "237x177", "#c" %>
+  <%= f.simple_fields_for :elementos, foto, :index => foto.id do |formulario| %>
+    <%= formulario.input :titulo %>
+    <%= foto.archivo_uid.present? ? formulario.label(:remove_archivo, formulario.check_box(:remove_archivo) + "Eliminar", :class => :check) : formulario.input(:archivo, :as => :file) %>
+  <%- end -%>
+</article>

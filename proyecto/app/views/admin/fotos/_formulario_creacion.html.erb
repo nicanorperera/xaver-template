@@ -1,0 +1,10 @@
+<%= simple_form_for propietario, :url => url, :html => { :class => :mini } do |f| %>
+  <%= hidden_field_tag :url, admin_polymorphic_path(propietario, :fotos) %>
+  <%= render "campos", :f => f %>
+  <script type="text/javascript">
+    $(".agregar-foto").click(function(){
+      $("form article:last").after('<%= escape_javascript render("campos", :f => f) %>');
+    });
+  </script>
+  <%= f.button :submit, :name => nil, :disable_with => t("espere") %>
+<%- end -%>

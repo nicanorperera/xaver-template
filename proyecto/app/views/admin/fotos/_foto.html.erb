@@ -1,0 +1,7 @@
+<%= content_tag :article, :id => "elementos_#{foto.id}" do %>
+  <%= content_tag :span, foto(foto, "237x177", "#c"), :class => :arrastrable %>
+  <nav>
+    <%= link_to "Editar", edit_admin_foto_path(foto) if can? :update, foto %>
+    <%= link_to "Eliminar", admin_foto_path(foto), :method => :delete, :confirm => t("confirmacion"), :remote => true if can? :destroy, foto %>
+  </nav>
+<%- end -%>

@@ -1,0 +1,7 @@
+<article>
+  <%= f.simple_fields_for :fotos_attributes, :index => nil do |formulario| %>
+    <%= formulario.input :titulo, :autofocus => true, :label => false, :required => false %>
+    <%= formulario.input :archivo, :as => :file, :label => false %>
+  <%- end -%>
+  <%= link_to_function "Quitar", "$(this).parent().remove();" %>
+</article>

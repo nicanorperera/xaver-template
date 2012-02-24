@@ -1,6 +1,9 @@
 APP_CONFIG = {
   :dominio =>'<%= app_name %>.herokuapp.com',
   # :dominio => '<%= @url_name %>',
+
+
+  # :bucket_name => 'xaver.<%= app_name %>',
   # :access_key_id =>'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   # :secret_access_key => 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
 }

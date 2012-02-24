@@ -6,7 +6,7 @@ app.datastore = Dragonfly::DataStorage::S3DataStore.new
 
 app.datastore.configure do |c|
   c.bucket_name = "URL" if Rails.env.production?
-  c.bucket_name = 'development' if Rails.env.development?
+  c.bucket_name = APP_CONFIG[:bucket_name]
   c.access_key_id = APP_CONFIG[:access_key_id]
   c.secret_access_key = APP_CONFIG[:secret_access_key]
 end

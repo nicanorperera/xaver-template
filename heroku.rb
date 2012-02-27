@@ -17,6 +17,8 @@ run "git push heroku master"
 run "heroku addons:add deployhooks:email --recipient=deploys@xaver.com.ar --subject='#{@app_name} | {{git_log}}' --body='{{user}}: {{git_log}} {{url}}'"
 
 run "heroku addons:add custom_domains:basic"
+run "heroku addons:add pgbackups"
+
 run "heroku domains:add www.#{@url_name}"
 run "heroku domains:add #{@url_name}"
 

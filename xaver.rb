@@ -17,6 +17,7 @@ remove_file "config/database.yml"
 remove_file "config/environments/production.rb"
 remove_file "config/initializers/inflections.rb"
 remove_file "config/routes.rb"
+remove_file "config/locales/en.yml"
 
 remove_file "public/index.html"
 remove_file "public/robots.txt"

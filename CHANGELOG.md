@@ -1,3 +1,9 @@
+## v0.4.2
+* Elimina archivo config/locales/en.yml
+
+## v0.4.1
+* Agrega Header a Admin Index Consultas
+
 ## v0.4.0
 * Configuracion Fotos
 * Modelo Fotos

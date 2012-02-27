@@ -11,6 +11,7 @@ remove_file "app/assets/images/rails.png"
 remove_file "app/assets/javascripts/application.js"
 remove_file "app/views/layouts/application.html.erb"
 remove_file "app/helpers/application_helper.rb"
+remove_file "app/controllers/application_controller.rb"
 
 remove_file "config/application.rb"
 remove_file "config/database.yml"

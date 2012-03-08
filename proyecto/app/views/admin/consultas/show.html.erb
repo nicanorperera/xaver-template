@@ -1,7 +1,7 @@
-<h1>Consulta recibida el <%= l @consulta.created_at %></h1>
-<nav>
-  <%= link_to "Volver", admin_consultas_path %>
-</nav>
+<div class="page-header">
+  <h1>Consulta recibida el <%= l @consulta.created_at %></h1>
+</div>
+<%= link_to "Volver", admin_consultas_path %>
 
 <p>
   <b>Nombre y apellido:</b>

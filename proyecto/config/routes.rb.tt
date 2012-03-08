@@ -15,6 +15,6 @@
   match :login, :to => 'sesiones#new', :as => :login
   match :logout, :to => 'sesiones#destroy', :as => :logout
 
-  root :to => 'sesiones#new'
+  root :to => 'application#portada'
 
 end

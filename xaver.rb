@@ -9,8 +9,8 @@ remove_file "README"
 
 remove_file "app/assets/images/rails.png"
 remove_file "app/assets/javascripts/application.js"
-remove_file "app/views/layouts/application.html.erb"
 remove_file "app/helpers/application_helper.rb"
+remove_file "app/views/layouts/application.html.erb"
 remove_file "app/controllers/application_controller.rb"
 
 remove_file "config/application.rb"
@@ -36,9 +36,18 @@ rake 'db:migrate'
 # Genera Migración de Consulta
 generate(:model, "consulta", "nombre", "apellido", "telefono", "email", "direccion", "localidad", "mensaje:text", "--skip")
 
-# Instala Simple_form: 
-generate 'simple_form:install'
+# Instala Bootstrap (Assets)
+generate 'bootstrap:install'
 
+# Instala simple_form: 
+generate 'simple_form:install --bootstrap'
+
+# Instala mini_form en lib/ : 
+generate 'mini_form'
+
+# THINK: Podria hacer un generate migration propio, para hacer Usuarios y Fotos.
+
+# TODO: Hay mejor manera?. Seria mejor que roles aparezca en la migracion (*)_cargar_usuarios.rb
 # Instala sorcery con modelo 'Usuario'
 generate 'sorcery:install --model Usuario'
 
@@ -46,12 +55,13 @@ generate 'sorcery:install --model Usuario'
 remove_file 'app/models/usuario.rb'
 copy_file File.join(@raiz, 'archivos', 'usuario.rb'), 'app/models/usuario.rb'
 
-#Guarda el tiempo actual en una variable y copia el archivo de migración create_fotos.rb
-@tiempo = (Time.now - 10).utc.strftime("%Y%m%d%H%M%S")
-copy_file File.join(@raiz, 'archivos', 'create_fotos.rb'), "db/migrate/#{@tiempo}_create_fotos.rb"
-
 # Crea Migracion para agregar Rol a Usuario
 generate(:migration, 'AddRolToUsuarios rol:string')
+
+# TODO: Mejorarlo!!! es muy complicado!!
+# Guarda el tiempo actual en una variable y copia el archivo de migración create_fotos.rb
+@tiempo = (Time.now - 10).utc.strftime("%Y%m%d%H%M%S")
+copy_file File.join(@raiz, 'archivos', 'create_fotos.rb'), "db/migrate/#{@tiempo}_create_fotos.rb"
 
 # Migración y Creación de usuarios.
 rake 'db:migrate VERSION=0'

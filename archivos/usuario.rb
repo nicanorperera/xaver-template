@@ -1,10 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Usuario < ActiveRecord::Base
-  # Se utiliza FriendlyId para identificar los objetos.
-  # extend FriendlyId
-  # Se utiliza friendly_id. Se friendlyiza el :username.
-  # friendly_id :username
-  
+ 
   authenticates_with_sorcery!
   
   attr_accessible :username, :email, :password, :password_confirmation, :rol

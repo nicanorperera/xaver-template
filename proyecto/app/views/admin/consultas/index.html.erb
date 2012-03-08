@@ -1,6 +1,11 @@
-<h1>Consultas</h1>
+<div class="page-header">
+  <h1>Consultas</h1>
+</div>
 <p>Se listan a continuación las consultas recibidas en el sistema.</p>
-<%= content_tag :section, :id => :listado, :class => :listado do %>
-  <%= render "header" %>
-  <%= render @consultas %>
-<%- end -%>
+
+<table id="ordenable" class="table table-striped ordenable">
+  <%= thead(:nombre) %>
+  <tbody>
+    <%= render @consultas %>
+  </tbody>
+</table>

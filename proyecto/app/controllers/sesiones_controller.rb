@@ -1,6 +1,5 @@
 # -*- encoding : utf-8 -*-
 class SesionesController < ApplicationController
-  layout false
 
   def index
     redirect_to (logged_in? ? admin_root_path : login_path), notice: notice, alert: alert

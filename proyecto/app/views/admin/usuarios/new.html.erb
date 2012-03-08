@@ -1,6 +1,5 @@
-<h1>Nuevo usuario</h1>
-<p>Complete los campos a continuación para crear un nuevo usuario en el sistema.</p>
-<nav>
-  <%= link_to "Volver", admin_usuarios_path %>
-</nav>
-<%= render "formulario", :usuario => @usuario, :url => admin_usuarios_path %>
+<div class="page-header">
+  <h1>Nuevo usuario</h1>
+</div>
+<%= link_to "Volver", admin_usuarios_path %> 
+<%= render "form", :usuario => @usuario, :url => admin_usuarios_path %>

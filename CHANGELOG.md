@@ -1,3 +1,6 @@
+## v0.5.0
+* Refactoring Total. Usa Bootstrap. Es más rapido.
+
 ## v0.4.2
 * Elimina archivo config/locales/en.yml
 

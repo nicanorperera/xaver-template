@@ -26,7 +26,6 @@ run "heroku addons:upgrade logging:expanded"
 run "heroku addons:add sendgrid:starter"
 run "heroku addons:add memcache:5mb"
 
-
 # Para que funcionen los assets en Rails 3.2.1
 run "heroku plugins:install http://github.com/heroku/heroku-labs.git"
 run "heroku labs:enable user_env_compile"

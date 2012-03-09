@@ -4,6 +4,13 @@
 
 @url_name = ask("Escriba la URL del sitio:")
 
+@fecha ||= Time.now
+
+def fecha
+ @fecha  += 1
+ @fecha.utc.strftime("%Y%m%d%H%M%S")
+end
+
 remove_file "Gemfile"
 remove_file "README"
 
@@ -33,39 +40,11 @@ run 'bundle install'
 rake 'db:create', :env => 'development'
 rake 'db:migrate'
 
-# Genera Migración de Consulta
-generate(:model, "consulta", "nombre", "apellido", "telefono", "email", "direccion", "localidad", "mensaje:text", "--skip")
-
-# Instala Bootstrap (Assets)
+# Instala Bootstrap (Assets), simple_form con soporte Bootstrap y mini_form
 generate 'bootstrap:install'
-
-# Instala simple_form: 
 generate 'simple_form:install --bootstrap'
-
-# Instala mini_form en lib/ : 
 generate 'mini_form'
 
-# THINK: Podria hacer un generate migration propio, para hacer Usuarios y Fotos.
-
-# TODO: Hay mejor manera?. Seria mejor que roles aparezca en la migracion (*)_cargar_usuarios.rb
-# Instala sorcery con modelo 'Usuario'
-generate 'sorcery:install --model Usuario'
-
-# Modifica el modelo 'Usuario'
-remove_file 'app/models/usuario.rb'
-copy_file File.join(@raiz, 'archivos', 'usuario.rb'), 'app/models/usuario.rb'
-
-# Crea Migracion para agregar Rol a Usuario
-generate(:migration, 'AddRolToUsuarios rol:string')
-
-# TODO: Mejorarlo!!! es muy complicado!!
-# Guarda el tiempo actual en una variable y copia el archivo de migración create_fotos.rb
-@tiempo = (Time.now - 10).utc.strftime("%Y%m%d%H%M%S")
-copy_file File.join(@raiz, 'archivos', 'create_fotos.rb'), "db/migrate/#{@tiempo}_create_fotos.rb"
-
-# Migración y Creación de usuarios.
-rake 'db:migrate VERSION=0'
-rake 'db:migrate'
 rake 'cargar:usuarios'
 
 # Subir aplicación a Heroku y Configurar.

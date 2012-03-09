@@ -40,12 +40,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Administración</a>
+          <%= link_to "Administración", admin_root_path, :class => :brand %>
           <div class="container nav-collapse">
             <ul class="nav">
               <li><%= link_to "Hola #{current_user.username}!", edit_admin_usuario_path(current_user) %></li>
               <li><%= link_to "Editar perfil", edit_admin_usuario_path(current_user) %></li>
-              <li><%= link_to "Ver sitio", root_path %></li>
+              <li><%= link_to "Ver sitio"    , root_path %></li>
               <li><%= link_to "Cerrar sesión", logout_path %></li>
             </ul>
           </div><!--/.nav-collapse -->

@@ -3,18 +3,17 @@
   
   namespace :admin do
     root :to => 'admin#admin'
-    resources :usuarios, :except => :show
+    resources :usuarios , :except => :show
     resources :consultas, :only => [:index, :show, :destroy]
-    resources :fotos, :only => [:edit, :update, :destroy]
+    resources :fotos    , :only => [:edit, :update, :destroy]
   end 
  
-  resources :sesiones, :only => [:index, :new, :create, :destroy]
+  resources :sesiones , :only => [:index, :new, :create, :destroy]
   resources :consultas, :only => :create
  
-  match :contacto, :to => 'consultas#new', :as => :contacto
-  match :login, :to => 'sesiones#new', :as => :login
-  match :logout, :to => 'sesiones#destroy', :as => :logout
+  match :contacto, :to => 'consultas#new'   , :as => :contacto
+  match :login   , :to => 'sesiones#new'    , :as => :login
+  match :logout  , :to => 'sesiones#destroy', :as => :logout
 
   root :to => 'application#portada'
-
 end

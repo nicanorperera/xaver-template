@@ -18,6 +18,7 @@ end
 
 group :development do
   gem 'letter_opener'
+  gem 'foldscaf'
 end
 
 group :production do
@@ -26,7 +27,6 @@ group :production do
   gem 'exception_notification'
 end
 
-gem 'foldscaf'
 gem 'sorcery'
 gem 'simple_form'
 gem 'cancan'
@@ -37,7 +37,3 @@ gem 'fog'
 gem 'rack-cache', require: 'rack/cache'
 gem 'RedCloth'
 gem 'rack-rewrite'
-
-
-
-

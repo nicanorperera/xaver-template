@@ -1,11 +1,8 @@
 @raiz = File.expand_path(File.join(File.dirname(__FILE__)))
-
 @proyecto = File.join(@raiz, 'proyecto')
-
 @url_name = ask("Escriba la URL del sitio:")
 
 @fecha ||= Time.now
-
 def fecha
  @fecha  += 1
  @fecha.utc.strftime("%Y%m%d%H%M%S")

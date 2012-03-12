@@ -1,5 +1,8 @@
+## v0.6.4
+* agregado task cargar_todo.rake
+
 ## v0.6.3
-* modificado y documentado metodo de application_helper.rb <tt>thead<tt>, versión Gius.
+* modificado y documentado metodo de application_helper.rb <tt>thead<tt>, versión Gius
 
 ## v0.6.2
 * gema foldscaf ahora está en group_gem :development

@@ -42,14 +42,17 @@ module ApplicationHelper
     end
   end
 
+  # Retorna el header de la tabla. Ej: <%= thead(:parametro_uno, :parametro_dos )%>, retorna:
+  #
+  #     <thead>
+  #       <tr>
+  #         <th>Parametro Uno</th>
+  #         <th>Parametro Dos</th>
+  #       </tr>
+  #     </thead>
+  #
   def thead(*args)
-    content_tag :thead do
-      content_tag :tr do
-        args.reduce('') { |c, arg|
-          c << content_tag(:th , arg)
-        }.html_safe
-      end
-    end
+    content_tag :thead, content_tag(:tr, args.map { |arg| content_tag :th, arg.to_s.humanize }.join.html_safe)
   end
-  
+
 end

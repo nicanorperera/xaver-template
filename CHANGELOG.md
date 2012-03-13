@@ -1,3 +1,8 @@
+## v0.6.5
+* agregado favicon.ico con forma de estrella para nuevas aplicaciones
+* ahora carga correctamente el favicon y no lanza mensajes de error en heroku
+* layout admin y application modificados para cargar correctamente favicon
+
 ## v0.6.4
 * agregado task cargar_todo.rake
 

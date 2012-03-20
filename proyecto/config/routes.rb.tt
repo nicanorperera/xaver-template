@@ -2,10 +2,10 @@
 <%= @app_name.capitalize %>::Application.routes.draw do
   
   namespace :admin do
-    root :to => 'admin#admin'
     resources :usuarios , :except => :show
     resources :consultas, :only => [:index, :show, :destroy]
     resources :fotos    , :only => [:edit, :update, :destroy]
+    root :to => 'admin#admin'
   end 
  
   resources :sesiones , :only => [:index, :new, :create, :destroy]
@@ -16,4 +16,5 @@
   match :logout  , :to => 'sesiones#destroy', :as => :logout
 
   root :to => 'application#portada'
+
 end

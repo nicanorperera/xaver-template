@@ -1,10 +1,9 @@
-<%- atributo = :imagen if atributo.nil? -%>
-<%- if elemento.try(atributo).present? %>
+<% atributo = :imagen if atributo.nil? %>
+<% if elemento.try(atributo).present? %>
   <span class="imagen">
-    <%= imagen elemento.try(atributo), "50x35", "#c" %><br />
-    <%= f.label "remove_#{atributo}" %>
-    <%= f.check_box "remove_#{atributo}" %>
+    <%= f.input "remove_#{atributo}", :as => :boolean, :label => "Eliminar #{atributo}" %>
+    <%= imagen elemento.try(atributo), "50x35", "#c" %>
   </span>
-<%- else -%>
+<% else %>
   <%= f.input atributo, :as => :file %>
-<%- end -%>
+<% end %>

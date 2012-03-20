@@ -3,8 +3,7 @@ class CreateFotos < ActiveRecord::Migration
   def change
     create_table :fotos do |t|
       t.string :titulo
-      t.string :archivo_uid
-      t.string :archivo_name
+      t.string :archivo_uid, :archivo_name
 
       t.integer :orden
       t.references :propietario, :polymorphic => true

@@ -1,34 +1,43 @@
 <div class="page-header">
   <h1>Consulta recibida el <%= l @consulta.created_at %></h1>
 </div>
-<%= link_to "Volver", admin_consultas_path %>
 
-<p>
-  <b>Nombre y apellido:</b>
-  <%= @consulta.nombre_completo %>
-</p>
+<nav class="well">
+  <%= link_to "Volver", admin_consultas_path, :class => 'btn' %>
+</nav>
 
-<p>
-  <b>Telefono:</b>
-  <%= @consulta.telefono %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @consulta.email %>
-</p>
-
-<p>
-  <b>Dirección:</b>
-  <%= @consulta.direccion %>
-</p>
-
-<p>
-  <b>Localidad:</b>
-  <%= @consulta.localidad %>
-</p>
-
-<p>
-  <b>Mensaje:</b>
-  <%= @consulta.mensaje %>
-</p>
+<table class="table table-striped table-bordered">
+  <tbody>
+    
+    <tr>
+      <th>Nombre y apellido</th>
+      <td><%= @consulta.nombre_completo %></td>
+    </tr>
+    
+    <tr>
+      <th>Teléfono</th>
+      <td><%= @consulta.telefono %></td>
+    </tr>
+    
+    <tr>
+      <th>Correo electrónico</th>
+      <td><%= @consulta.email %></td>
+    </tr>
+    
+    <tr>
+      <th>Dirección</th>
+      <td><%= @consulta.direccion %></td>
+    </tr>
+    
+    <tr>
+      <th>Localidad</th>
+      <td><%= @consulta.localidad %></td>
+    </tr>
+    
+    <tr>
+      <th>Mensaje</th>
+      <td><%= @consulta.mensaje %></td>
+    </tr>
+    
+  </tbody>
+</table>

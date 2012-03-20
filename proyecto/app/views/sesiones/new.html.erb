@@ -1,7 +1,14 @@
-<h1>Iniciar sesión</h1>
+<div class='page-header'>
+  <h1>Iniciar sesión</h1>
+</div>
+
 <p>Por favor ingrese su usuario y contraseña para iniciar sesión.</p>
+
 <%= simple_form_for @usuario, :url => sesiones_path do |f| %>
   <%= f.input :username, :autofocus => true %>
   <%= f.input :password %>
-  <%= f.button :submit, "Iniciar sesión", :disable_with => t("espere") %>
-<%- end -%>
+
+  <div class='form-actions'>
+    <%= f.button :submit, "Iniciar sesión", :disable_with => t("espere"), :class => 'btn btn-primary' %>
+  </div>
+<% end %>

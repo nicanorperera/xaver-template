@@ -3,14 +3,10 @@
 </div>
 
 <nav class="well">
- <%= link_to icono('plus', :blanco)+" Agregar usuario ", new_admin_usuario_path, :class => 'btn btn-primary' %>
+  <%= link_to icono('plus', :blanco) + " Agregar usuario", new_admin_usuario_path, :class => 'btn btn-primary' %>
 </nav>
 
-<p>Se listan a continuación los usuarios que posee el sitio.</p>
-
-<table id="ordenable" class="table table-striped ordenable">
-  <%= thead(:nombre) %>
-  <tbody>
-    <%= render @usuarios %>
-  </tbody>
+<table id="listado" class="table table-striped ordenable">
+  <%= thead :nombre %>
+  <%= content_tag :tbody, render(@usuarios) %>
 </table>

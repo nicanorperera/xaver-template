@@ -15,12 +15,12 @@ $(function(){
         return ui;
     };
 
-    $( "#ordenable tbody" ).sortable({
+    $("table.ordenable tbody").sortable({
         dropOnEmpty: false,
         handle: '.handle',
         helper: fixHelper, 
         opacity: 0.4,
-        scroll:true,
+        scroll: true,
         update: function(){
             $.ajax({
                 type: 'post',

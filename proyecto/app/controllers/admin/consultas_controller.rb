@@ -11,12 +11,18 @@ class Admin::ConsultasController < Admin::AdminController
   def destroy
     @id = @consulta.id
     @consulta.destroy
-    notice = flash.now.notice = t("notice.#{action_name}")
+    notice = mensaje
 
     respond_to do |format|
       format.html { redirect_to admin_consultas_path, notice: notice }
       format.js
     end
   end
-  
+
+  private
+
+  def mensaje
+    flash.now.notice = t("notice.#{action_name}")
+  end
+
 end

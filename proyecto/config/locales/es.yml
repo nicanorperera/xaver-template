@@ -11,7 +11,6 @@ es:
   alert:
     debe_autenticarse: "Primero debe autenticarse para tener acceso."
     sesion_no_iniciada: "El usuario y/o la contraseña no son válidos. Por favor reintente!"
-    correlatividad_duplicada: "Esa materia ya es fue agregada como correlativa."
   unauthorized:
     manage:
       all: "Su usuario no está autorizado para realizar esa acción."

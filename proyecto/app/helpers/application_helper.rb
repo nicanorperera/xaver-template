@@ -18,7 +18,7 @@ module ApplicationHelper
   def icono(nombre, estilo = :normal)
     c = "icon-#{nombre} "
     c += 'icon-white ' if estilo == :blanco
-    content_tag :i, '',:class => c
+    content_tag :i, '', :class => ["icon-#{nombre}", ("icon-white" if estilo == :blanco)]
   end
 
   # Retorna todos los mensajes Flash con formato de Twitter Bootstrap
@@ -29,9 +29,7 @@ module ApplicationHelper
   #     </div>
   #
   def mensajes_flash
-    flash.collect do |id, mensaje|
-      content_tag :div, (link_to 'x','#', :class => 'close', 'data-dismiss' => "alert" ) + content_tag(:p, mensaje), :class => "alert alert-#{flash_type(id)} fade in"
-    end.join.html_safe
+    content_tag :div, flash.collect { |id, mensaje| content_tag :div, (link_to 'x','#', :class => 'close', 'data-dismiss' => "alert" ) + mensaje, :class => "alert alert-#{flash_type(id)} fade in" }.join.html_safe, :id => :flash
   end
 
   def flash_type(type)
@@ -53,6 +51,10 @@ module ApplicationHelper
   #
   def thead(*args)
     content_tag :thead, content_tag(:tr, args.map { |arg| content_tag :th, arg.to_s.humanize }.join.html_safe)
+  end
+
+  def fecha(una_fecha, opciones = {})
+    una_fecha.present? ? l(una_fecha, opciones) : "-"
   end
 
 end

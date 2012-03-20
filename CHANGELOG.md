@@ -1,3 +1,6 @@
+## v0.6.7
+* solucionado problema con favicon
+
 ## v0.6.5
 * agregado favicon.ico con forma de estrella para nuevas aplicaciones
 * ahora carga correctamente el favicon y no lanza mensajes de error en heroku

@@ -1,8 +1,7 @@
 # -*- encoding : utf-8 -*-
 class Usuario < ActiveRecord::Base
- 
   authenticates_with_sorcery!
-  
+
   attr_accessible :username, :email, :password, :password_confirmation, :rol
 
   validates :password, :confirmation => true
@@ -15,7 +14,7 @@ class Usuario < ActiveRecord::Base
   def rol_es?(un_rol)
     rol == un_rol.to_s
   end
-  
+
   def roles_que_puede_crear
     case rol.to_sym
     when :superadmin
@@ -26,6 +25,5 @@ class Usuario < ActiveRecord::Base
   end
 
   alias_attribute :to_s, :username
-  
-end
 
+end

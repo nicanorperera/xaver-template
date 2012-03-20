@@ -18,7 +18,7 @@ module Xexcepciones
           excepcion.record.imagen = nil if excepcion.record.attributes.keys.include?("imagen_uid") && excepcion.record.errors[:imagen].any?
           render :new          
         end
-        format.js { render :partial => "recargar" }
+        format.js { render :partial => :recargar }
       end
       
     when :update

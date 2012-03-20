@@ -13,7 +13,7 @@ class Admin::FotosController < Admin::AdminController
 
   def update
     @foto.update_attributes! params[:foto]
-    redirect_to edit_admin_foto_path(@foto), notice: t("notice.#{action_name}", :elemento => @foto.titulo)
+    redirect_to edit_admin_foto_path(@foto), notice: mensaje
   end
 
   def editar
@@ -23,14 +23,14 @@ class Admin::FotosController < Admin::AdminController
   def actualizar
     @propietario.fotos.update params[:elementos].keys, params[:elementos].values
     @propietario.fotos.where(:archivo_uid => nil).destroy_all
-    redirect_to admin_polymorphic_path(@propietario, :fotos, :editar), notice: t("notice.#{action_name}")
+    redirect_to admin_polymorphic_path(@propietario, :fotos, :editar), notice: mensaje
   end
 
   def destroy
     @id = @foto.id
     titulo = @foto.titulo
     @foto.destroy
-    notice = flash.now.notice = t("notice.#{action_name}", :elemento => titulo)
+    notice = mensaje
 
     respond_to do |format|
       format.html { redirect_to admin_polymorphic_path(@foto.propietario, :fotos), notice: notice }
@@ -42,6 +42,10 @@ class Admin::FotosController < Admin::AdminController
 
   def sort_coleccion
     @propietario.fotos
+  end
+
+  def mensaje
+    flash.now.notice = t("notice.#{action_name}")
   end
 
 end

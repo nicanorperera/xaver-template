@@ -1,3 +1,6 @@
+## v0.6.8
+* refactoring general de templates realizado por Gius
+
 ## v0.6.7
 * solucionado problema con favicon
 

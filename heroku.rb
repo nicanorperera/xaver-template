@@ -6,6 +6,11 @@ git :commit => "-m 'Commit Inicial'"
 
 run "heroku create #{@app_name} --stack cedar"
 
+# Para que funcionen los assets en Rails 3.2.1
+run "heroku plugins:install http://github.com/heroku/heroku-labs.git"
+run "heroku plugins:install http://github.com/heroku/heroku-labs.git"
+run "heroku labs:enable user_env_compile"
+
 run "git push heroku master"
 
 # Descomentar las lineas que crea necesarias.
@@ -22,13 +27,8 @@ run "heroku addons:add pgbackups"
 run "heroku domains:add www.#{@url_name}"
 run "heroku domains:add #{@url_name}"
 
-run "heroku addons:upgrade logging:expanded"
 run "heroku addons:add sendgrid:starter"
 run "heroku addons:add memcache:5mb"
-
-# Para que funcionen los assets en Rails 3.2.1
-run "heroku plugins:install http://github.com/heroku/heroku-labs.git"
-run "heroku labs:enable user_env_compile"
 
 run 'heroku run rake db:migrate'
 run 'heroku run rake cargar:usuarios'

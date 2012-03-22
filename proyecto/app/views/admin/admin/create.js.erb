@@ -1,5 +1,4 @@
-$("#ordenable tbody").append("<%= escape_javascript render(@elemento, :clase => :nuevo) %>");
+$("table.ordenable tbody").append("<%= j render(@elemento) %>");
 $("form input.string").val("");
-
 
 <%= render "recargar" %>

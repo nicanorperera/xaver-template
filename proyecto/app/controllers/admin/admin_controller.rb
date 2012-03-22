@@ -22,4 +22,5 @@ class Admin::AdminController < ApplicationController
   # Panel de Administración (Vista del admin_root_path)
   def admin
   end
+
 end

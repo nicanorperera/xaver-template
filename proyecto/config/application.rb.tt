@@ -22,6 +22,5 @@ module <%= @app_name.capitalize %>
     
     # Se configura una inserción de middleware para utilizar Dragonfly con el servidor Amazon S3 para alojar allí las imágenes.
     config.middleware.insert 0, 'Dragonfly::Middleware', :images
-    
   end
 end

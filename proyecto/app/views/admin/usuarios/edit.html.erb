@@ -1,5 +1,5 @@
 <div class="page-header">
   <h1>Editar perfil de usuario</h1>
 </div>
-<%= link_to "Volver", can?(:index, Usuario) ? admin_usuarios_path : sesiones_path %> 
+
 <%= render "form", :usuario => @usuario, :url => admin_usuario_path(@usuario) %>

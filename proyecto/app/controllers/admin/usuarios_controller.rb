@@ -16,7 +16,7 @@ class Admin::UsuariosController < Admin::AdminController
   def create
     @usuario = Usuario.new params[:usuario]
     @usuario.save!
-    redirect_to admin_usuarios_path, notice: mensaje }
+    redirect_to admin_usuarios_path, notice: mensaje
   end
 
   def update

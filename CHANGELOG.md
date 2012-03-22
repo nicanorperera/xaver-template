@@ -1,3 +1,6 @@
+## v0.6.9
+* fix error en usuarios controller de simbolo '}' flotando por ahi
+
 ## v0.6.8
 * refactoring general de templates realizado por Gius
 

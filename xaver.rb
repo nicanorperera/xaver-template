@@ -1,6 +1,6 @@
 @raiz = File.expand_path(File.join(File.dirname(__FILE__)))
 @proyecto = File.join(@raiz, 'proyecto')
-@url_name = ask("Escriba la URL del sitio:")
+@heroku   = File.join(@raiz, 'heroku.rb')
 
 @fecha ||= Time.now
 def fecha
@@ -47,5 +47,5 @@ rake 'cargar:usuarios'
 
 # Subir aplicación a Heroku y Configurar.
 if yes? 'Desea subir aplicacion a Heroku? (y/n)'
-  apply File.join( @raiz, 'heroku.rb' )
+  apply @heroku
 end

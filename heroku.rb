@@ -1,4 +1,4 @@
-@url_name ||= ask("Escriba la URL del sitio para Heroku:")
+@url_name = ask("Escriba la URL del sitio para Heroku:")
 
 git :init
 git :add => '.'

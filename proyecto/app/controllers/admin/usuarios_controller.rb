@@ -37,9 +37,7 @@ class Admin::UsuariosController < Admin::AdminController
   end
 
   private
-
   def mensaje
     flash.now.notice = t("notice.#{action_name}")
   end
-
 end

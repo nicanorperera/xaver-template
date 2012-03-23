@@ -1,3 +1,17 @@
+## v0.7.0
+* agregados estilos de DatePicker a xaver.css
+* sólo pide la URL si se quiere subir la aplicación a Heroku. 
+* se agregó APP_CONFIG[:mail_host]
+* admin layout ahora con un menu diferente
+* :label_method => :humanize, para rol de usuarios en usuarios/_form
+* quitado class=> :ordenable de la tabla del index de consulta
+* quitado class=> :ordenable de la tabla del index de usuario
+* reemplazado admin/admin por admin/panel, y rutas, ya que es mas legible
+* <h1>...</h1> en admin/panel reemplazado por <div class="page-header"><h1>...</h1></div>
+* git rm ability.rb~ (archivo no utilizado)
+* eliminación de algunos espacios en blanco en varios archivos.
+* eliminado archivo mailers/.gitkeep
+
 ## v0.6.9
 * fix error en usuarios controller de simbolo '}' flotando por ahi
 

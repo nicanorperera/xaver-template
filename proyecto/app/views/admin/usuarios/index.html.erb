@@ -6,7 +6,7 @@
   <%= link_to icono('plus', :blanco) + " Agregar usuario", new_admin_usuario_path, :class => 'btn btn-primary' %>
 </nav>
 
-<table id="listado" class="table table-striped ordenable">
+<table id="listado" class="table table-striped">
   <%= thead :nombre %>
   <%= content_tag :tbody, render(@usuarios) %>
 </table>

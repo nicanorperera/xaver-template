@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Administración</title>
     <%= tag :meta, :"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" %>
@@ -17,7 +16,6 @@
     <![endif]-->
   </head>
   <body>
-
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -39,33 +37,29 @@
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="content">
         <div class="row">
-
           <div class="span3">
-            <ul class="nav nav-pills nav-stacked">
-              <li><%= link_to "Usuarios", admin_usuarios_path if can? :index, Usuario %></li>
-              <li><%= link_to "Consultas", admin_consultas_path if can? :index, Consulta %></li>
-            </ul>
+            <nav class="well">
+              <ul class="nav nav-list">
+                <li class="nav-header">Administración</li>
+                <li><%= link_to "Usuarios" , admin_usuarios_path  if can? :index, Usuario  %></li>
+                <li><%= link_to "Consultas", admin_consultas_path if can? :index, Consulta %></li>
+              </ul>
+            </nav>
           </div>
-
           <div class="span9">
             <section id ="flash">
               <%= mensajes_flash %>
             </section>
             <%= yield %>
           </div>
-
         </div>
       </div>
-
       <footer id="footer">
         <%= link_to "", "http://www.xaver.com.ar", :class => :xaver, :title => "Xaver soluciones + tecnología", :target => :_blank %>
       </footer>
-
     </div>
-
   </body>
 </html>

@@ -22,12 +22,6 @@ module ApplicationHelper
   end
 
   # Retorna todos los mensajes Flash con formato de Twitter Bootstrap
-  #
-  #     <div class='alert alert-success fade in'>
-  #       Este es el mensaje de tipo :notice
-  #       <a href=# class='close' data-dismiss='alert'>x</a>
-  #     </div>
-  #
   def mensajes_flash
     content_tag :div, flash.collect { |id, mensaje| content_tag :div, (link_to 'x','#', :class => 'close', 'data-dismiss' => "alert" ) + mensaje, :class => "alert alert-#{flash_type(id)} fade in" }.join.html_safe, :id => :flash
   end
@@ -40,15 +34,7 @@ module ApplicationHelper
     end
   end
 
-  # Retorna el header de la tabla. Ej: <%= thead(:parametro_uno, :parametro_dos )%>, retorna:
-  #
-  #     <thead>
-  #       <tr>
-  #         <th>Parametro Uno</th>
-  #         <th>Parametro Dos</th>
-  #       </tr>
-  #     </thead>
-  #
+  # Retorna el header de la tabla. 
   def thead(*args)
     content_tag :thead, content_tag(:tr, args.map { |arg| content_tag :th, arg.to_s.humanize }.join.html_safe)
   end

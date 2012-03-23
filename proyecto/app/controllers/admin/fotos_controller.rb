@@ -47,5 +47,4 @@ class Admin::FotosController < Admin::AdminController
   def mensaje
     flash.now.notice = t("notice.#{action_name}")
   end
-
 end

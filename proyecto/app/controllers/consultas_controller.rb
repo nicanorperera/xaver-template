@@ -10,5 +10,4 @@ class ConsultasController < ApplicationController
     @consulta.save!
     redirect_to contacto_path, notice: t("notice.consulta_enviada")
   end
-
 end

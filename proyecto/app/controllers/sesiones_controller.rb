@@ -24,6 +24,4 @@ class SesionesController < ApplicationController
     logout
     redirect_to login_path, notice: notice, alert: alert
   end
-
 end
-

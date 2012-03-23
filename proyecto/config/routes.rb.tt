@@ -5,7 +5,7 @@
     resources :usuarios , :except => :show
     resources :consultas, :only => [:index, :show, :destroy]
     resources :fotos    , :only => [:edit, :update, :destroy]
-    root :to => 'admin#admin'
+    root :to => 'admin#panel'
   end 
  
   resources :sesiones , :only => [:index, :new, :create, :destroy]

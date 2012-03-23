@@ -20,7 +20,7 @@ class Admin::AdminController < ApplicationController
   end
  
   # Panel de Administración (Vista del admin_root_path)
-  def admin
+  # Creo que si saco este método, funciona igual. Pero no estoy seguro.
+  def panel
   end
-
 end

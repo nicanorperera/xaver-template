@@ -1,3 +1,7 @@
+## v0.7.1
+* quitado APP_CONFIG[:mail_host]
+* fix problema relacionado con mail_host en environments/production.rb
+
 ## v0.7.0
 * agregados estilos de DatePicker a xaver.css
 * sólo pide la URL si se quiere subir la aplicación a Heroku. 

@@ -1,9 +1,14 @@
-<h1>Edición masiva de fotos de <%= @propietario %></h1>
+<div class="page-header">
+  <h1>Fotos</h1>
+</div>
+
 <p>Se listan a continuación los formularios de edición de las fotos que posee <%= @propietario %>.</p>
-<nav>
-  <%= link_to "Administrar fotos", admin_polymorphic_path(@propietario, :fotos) %>
+
+<nav class="well">
+  <%= link_to "Administrar fotos", admin_polymorphic_path(@propietario, :fotos), :class => 'btn' %>
 </nav>
-<%= simple_form_for @propietario, :as => "", :url => admin_polymorphic_path(@propietario, :fotos, :actualizar), :html => { :method => :post, :class => "normal multiple" } do |f| %>
+
+<%= simple_form_for @propietario, :as => "", :url => admin_polymorphic_path(@propietario, :fotos, :actualizar), :html => { :method => :post, :class => "form-horizontal" } do |f| %>
   <%= render :partial => "editable", :collection => @propietario.fotos, :as => :foto, :locals => { :f => f } %>
   <%= f.button :submit, :disable_with => t("espere") %>
 <%- end -%>

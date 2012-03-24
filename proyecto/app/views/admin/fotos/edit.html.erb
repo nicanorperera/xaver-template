@@ -1,11 +1,16 @@
-<h1>Editar foto</h1>
-<nav>
-  <%= link_to "Administrar fotos", admin_polymorphic_path(@foto.propietario, :fotos) %>
+<div class="page-header">
+  <h1>Editar foto</h1>
+</div>
+
+<nav class="well">
+  <%= link_to "Volver", admin_polymorphic_path(@foto.propietario, :fotos), :class => 'btn' %>
 </nav>
-<%= simple_form_for @foto, :url => admin_foto_path(@foto), :html => { :class => :normal } do |f| %>
-  <article class="foto">
-    <%= foto @foto, "237x177", "#c" %>
-    <%= f.input :titulo, :autofocus => true %>
-  </article>
+
+<%= simple_form_for @foto, :url => admin_foto_path(@foto), :html => { :class => "form-horizontal" } do |f| %>
+  <div class="foto">
+    <%= foto @foto, "400x" %>
+    <%= f.input :titulo %>
+    <%= f.input :remove_archivo, :label => "Eliminar", :as => :boolean if @foto.archivo.present? %>
+  </div>
   <%= f.button :submit, :disable_with => t("espere") %>
 <%- end -%>

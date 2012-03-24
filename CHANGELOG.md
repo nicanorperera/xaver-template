@@ -1,3 +1,6 @@
+## v0.7.2
+* actualizadas fotos para bootstrap
+
 ## v0.7.1
 * quitado APP_CONFIG[:mail_host]
 * fix problema relacionado con mail_host en environments/production.rb

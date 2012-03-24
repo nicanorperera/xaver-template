@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 class Admin::FotosController < Admin::AdminController
   include Sortable
+  # Debe cambiar :producto por el modelo que corresponda
   load_resource :producto, :instance_name => :propietario
   load_and_authorize_resource :through => :propietario, :shallow => true
 

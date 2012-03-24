@@ -1,3 +1,8 @@
+## v0.7.3
+* refactoring en heroku.rb
+* en lugar de "run git push heroku master" ahora es "git :push => 'heroku master'"
+* cambiadas comillas dobles por comillas simples cuando no eran necesarias
+
 ## v0.7.2
 * actualizadas fotos para bootstrap
 

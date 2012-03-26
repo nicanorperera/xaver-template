@@ -1,3 +1,6 @@
+## v0.7.4
+* solucionado problema en heroku ("basi" en lugar de "basic")
+
 ## v0.7.3
 * refactoring en heroku.rb
 * en lugar de "run git push heroku master" ahora es "git :push => 'heroku master'"

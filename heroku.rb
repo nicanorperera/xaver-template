@@ -1,6 +1,8 @@
 @url_name = ask('Escriba la URL del sitio para Heroku:')
 
-git :init, :add => '.', :commit => "-m 'Commit Inicial'"
+git :init
+git :add => '.'
+git :commit => "-m 'Commit Inicial'"
 
 run "heroku create #{@app_name} --stack cedar"
 
@@ -19,7 +21,7 @@ git :push => 'heroku master'
 
 run "heroku addons:add deployhooks:email --recipient=deploys@xaver.com.ar --subject='#{@app_name} | {{git_log}}' --body='{{user}}: {{git_log}} {{url}}'"
 
-run 'heroku addons:add custom_domains:basi'
+run 'heroku addons:add custom_domains:basic'
 run 'heroku addons:add pgbackups'
 
 run "heroku domains:add www.#{@url_name}"

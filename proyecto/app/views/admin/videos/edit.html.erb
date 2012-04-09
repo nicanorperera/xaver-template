@@ -4,7 +4,6 @@
 
 <nav class="well">
   <%= link_to "Volver", admin_videos_path, :class => 'btn' %>
-  <%= link_to "Ver", admin_video_path(@video), :class => 'btn' %>
 </nav>
 
 <%= render "form", :video => @video, :url => admin_video_path(@video) %>

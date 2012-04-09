@@ -1,0 +1,9 @@
+<%= simple_form_for video, :url => url, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :nombre %>
+  <%= f.input :descripcion %>
+  <%= f.input :codigo_youtube %>
+
+  <div class="controls">
+    <%= f.button :submit, :name => nil, :disable_with => t("espere"), :class => 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<div class="page-header">
+  <h1>Videos</h1>
+</div>
+
+<nav class="well">
+  <%= link_to icono('plus', :blanco) + " Agregar video", new_admin_video_path, :class => 'btn btn-primary' %>
+</nav>
+
+<%= content_tag :table, :id => :listado, :class => [:table, :"table-striped", :ordenable] do %>
+  <%= thead :nombre, :acciones %>
+  <%= content_tag :tbody, render(@videos) %>
+<% end %>
+<%= content_tag :p, content_tag(:em, "Haga click en 'Mover', mantenga y arrastre para reordenar los elementos."), :class => "help-block" %>
+<%= hidden_field_tag :url, reordenar_admin_videos_path, :class => :url %>

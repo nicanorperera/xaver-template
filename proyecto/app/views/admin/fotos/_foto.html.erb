@@ -1,7 +1,7 @@
 <%= content_tag :tr, :id => "elementos_#{foto.id}" do %>
   <td><%= foto foto, "100x" %></td>
   <td><%= foto.titulo %></td>
-  <td>
+  <td style="text-align:right;">
     <%= link_to icono('move', :black) + " Mover", "#", :class => 'btn btn-mini handle', :title => 'Mantenga click y arrastre para reordenar' %>
     <%= link_to 'Editar', edit_admin_foto_path(foto), :class => 'btn btn-mini' if can? :editar, foto %>
     <%= link_to "Eliminar", admin_foto_path(foto), :method => :delete, :confirm => t("confirmacion"), :remote => true, :class => 'btn btn-mini btn-danger' if can? :destroy, foto %>

@@ -9,7 +9,7 @@ class Usuario < ActiveRecord::Base
   validates :username, :presence => true, :uniqueness => true
   validates :rol, :presence => true
 
-  ROLES = :superadmin, :admin
+  ROLES = 'superadmin', 'admin'
 
   def rol_es?(un_rol)
     rol == un_rol.to_s

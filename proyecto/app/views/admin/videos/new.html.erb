@@ -1,0 +1,9 @@
+<div class="page-header">
+  <h1>Crear Video</h1>
+</div>
+
+<nav class="well">
+  <%= link_to "Volver", admin_videos_path, :class => 'btn' %>
+</nav>
+
+<%= render "form", :video => @video, :url => admin_videos_path %>

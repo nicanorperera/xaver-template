@@ -1,0 +1,8 @@
+<%= content_tag :tr, :id => "elementos_#{video.id}" do %>
+  <td><%= video.nombre %></td>
+  <td style="text-align:right;">
+    <%= link_to icono('move', :black) + " Mover", "#", :class => 'btn btn-mini handle', :title => 'Mantenga click y arrastre para reordenar' %>
+    <%= link_to 'Editar', edit_admin_video_path(video), :class => 'btn btn-mini' if can? :editar, video %>
+    <%= link_to "Eliminar", admin_video_path(video), :method => :delete, :confirm => t("confirmacion"), :remote => true, :class => 'btn btn-mini btn-danger' if can? :destroy, video %>
+  </td>
+<% end %>

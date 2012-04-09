@@ -1,3 +1,8 @@
+## v0.7.5
+* agregados Videos
+* constante `ROLES = :superadmin, :admin` , ahora es `ROLES = 'superadmin', 'admin'` , para poder usar metodo <tt>humanize<tt>
+* agregado `text-align:right` a botones en Indexes de administración
+
 ## v0.7.4
 * solucionado problema en heroku ("basi" en lugar de "basic")
 

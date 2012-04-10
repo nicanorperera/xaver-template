@@ -1,3 +1,6 @@
+## v0.7.6
+* crear.js ahora permite crear elementos sin romperse al haber varias tablas
+
 ## v0.7.5
 * agregados Videos
 * constante `ROLES = :superadmin, :admin` , ahora es `ROLES = 'superadmin', 'admin'` , para poder usar metodo <tt>humanize<tt>

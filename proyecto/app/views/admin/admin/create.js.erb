@@ -1,4 +1,4 @@
-$("table.ordenable tbody").append("<%= j render(@elemento) %>");
+$("table#<%= @elemento.class.name.tableize %> tbody").append("<%= j render(@elemento) %>");
 $("form input.string").val("");
 
 <%= render "recargar" %>

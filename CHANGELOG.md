@@ -1,3 +1,6 @@
+## v0.7.7
+* Refactoring helper method - Icono
+
 ## v0.7.6
 * crear.js ahora permite crear elementos sin romperse al haber varias tablas
 

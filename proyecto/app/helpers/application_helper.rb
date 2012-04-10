@@ -20,8 +20,6 @@ module ApplicationHelper
   end  
   
   def icono(nombre, estilo = :normal)
-    c = "icon-#{nombre} "
-    c += 'icon-white ' if estilo == :blanco
     content_tag :i, '', :class => ["icon-#{nombre}", ("icon-white" if estilo == :blanco)]
   end
 

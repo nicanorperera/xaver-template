@@ -1,5 +1,10 @@
+## v0.8.0
+* agregados reset.sh & heroku.sh
+* agregados estilos & javascripts de Calendario
+* cambiado xaver.png por una mas simple
+
 ## v0.7.7
-* Refactoring helper method - Icono
+* refactoring helper method - Icono
 
 ## v0.7.6
 * crear.js ahora permite crear elementos sin romperse al haber varias tablas
@@ -33,7 +38,7 @@
 * quitado class=> :ordenable de la tabla del index de consulta
 * quitado class=> :ordenable de la tabla del index de usuario
 * reemplazado admin/admin por admin/panel, y rutas, ya que es mas legible
-* <h1>...</h1> en admin/panel reemplazado por <div class="page-header"><h1>...</h1></div>
+* <\h1>...<\/h1> en admin/panel reemplazado por <\div class="page-header"><\h1>...<\/h1><\/div>
 * git rm ability.rb~ (archivo no utilizado)
 * eliminación de algunos espacios en blanco en varios archivos.
 * eliminado archivo mailers/.gitkeep

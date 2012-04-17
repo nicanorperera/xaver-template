@@ -21,6 +21,7 @@
         <div class="container">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
             <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </a>
           <%%= link_to "<%= @app_name.capitalize %>", root_path, :class => :brand %>
           <div class="container nav-collapse">
@@ -41,7 +42,7 @@
       </div>
 
       <footer id="footer">
-        <%%= link_to "", "http://www.xaver.com.ar", :class => :xaver, :title => "Xaver soluciones + tecnología", :target => :_blank %>
+        <%%= link_to "", "http://www.xaver.com.ar", :title => "Xaver soluciones + tecnología", :target => :_blank %>
       </footer>
 
     </div>

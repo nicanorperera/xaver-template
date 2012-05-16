@@ -34,15 +34,9 @@ directory @proyecto, "../#{app_name}"
 # Instala Gemas: 
 run 'bundle install'
 
-# Creación y Migración de la Base de Datos
+# Creación, Migración y carga de la Base de Datos
 rake 'db:create', :env => 'development'
 rake 'db:migrate'
-
-# Instala Bootstrap (Assets), simple_form con soporte Bootstrap y mini_form
-generate 'bootstrap:install'
-generate 'simple_form:install --bootstrap'
-generate 'mini_form'
-
 rake 'cargar:usuarios'
 
 # Subir aplicación a Heroku y Configurar.

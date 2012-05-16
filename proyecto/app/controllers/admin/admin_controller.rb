@@ -18,9 +18,5 @@ class Admin::AdminController < ApplicationController
   def edit_admin_polymorphic_path(propietario, recurso = nil)
     edit_polymorphic_path [:admin, propietario, recurso]
   end
- 
-  # Panel de Administración (Vista del admin_root_path)
-  # Creo que si saco este método, funciona igual. Pero no estoy seguro.
-  def panel
-  end
+
 end

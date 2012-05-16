@@ -1,0 +1,8 @@
+<%= simple_form_for Usuario.new, :url => sesiones_path do |f| %>
+  <%= f.input :username, :autofocus => true %>
+  <%= f.input :password %>
+
+  <div class='form-actions'>
+    <%= f.button :submit, "Iniciar sesión", :disable_with => t("espere"), :class => 'btn btn-large btn-primary' %>
+  </div>
+<% end %>

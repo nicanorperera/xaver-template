@@ -1,12 +1,16 @@
-<h1>Contacto</h1>
+<div class="page-header">
+  <h1>Contacto</h1>
+</div>
 
-<%= simple_form_for @consulta do |f| %>
+<%= simple_form_for @consulta, :html => {:class => 'form-horizontal'} do |f| %>
   <%= f.input :nombre, :autofocus => true %>
   <%= f.input :apellido %>
   <%= f.input :telefono %>
   <%= f.input :email %>
   <%= f.input :direccion %>
   <%= f.input :localidad %>
-  <%= f.input :mensaje %>
-  <%= f.button :submit, :disable_with => t("espere") %>
+  <%= f.input :mensaje , :input_html => { :class => 'span4', :rows => 6} %>
+  <div class="controls">
+    <%= f.button :submit, :disable_with => t("espere"), :class => 'btn btn-large btn-primary' %>
+  </div>
 <% end %>

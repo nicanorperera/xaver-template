@@ -1,3 +1,42 @@
+## v1.0.0.pre
+
+* Assets:
+1- Imagenes de Xaver.png pasa a ser xavercolor.png y xaverblanco.png
+2- Javascripts Nuevos
+3- Hojas de Estilo Nuevas
+
+* Lib:
+1- Xexcepciones ahora es Excepciones
+2- Xbuscable ahora es Buscable, y se crea por defecto (antes no existía)
+3- Sortable ahora es Ordenable
+4- MiniForm no es más 'colapse' por defecto
+
+* Helpers:
+1- Separado en ApplicationHelper, ImagenesHelper y VideosHelper
+2- helper_method mensajes_flash mejorado, ahora usa "&times;" en lugar de 'x'
+3- Nuevo helper_method nombre_tabla(clase) #=> clase.name.tableize
+
+* Views:
+1- Agregada carpeta Kaminari, para paginación
+2- admin/Usuarios fue cambiada al nuevo estilo 
+3- application/_slide fue eliminado.
+4- application/portada.html tiene nuevo estilo.
+5- admin/_create.js adaptado a helper_method nombre_tabla
+6- layouts admin y application adaptados a las nuevas vistas
+7- application/sesiones/new ahora se divide en new y _form, para ser usado en el navbar.
+...Aclaración:Fotos, Consultas y Videos será revisada en futuras versiones.
+
+* Config:
+
+1- initializers/simple_form aparece de entrada (no hace falta instalarlo)
+2- locales/simple_form_es aparece de entrada
+
+* Gemfile:
+1- agregada gema quiet_assets
+
+* Xaver.rb:
+1- No llama instaladores de twitter-bootstrap-rails, simple_form ni mini_form
+
 ## v0.8.0
 * agregados reset.sh & heroku.sh
 * agregados estilos & javascripts de Calendario

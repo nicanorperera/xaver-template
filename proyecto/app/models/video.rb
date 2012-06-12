@@ -5,4 +5,8 @@ class Video < ActiveRecord::Base
   validates :nombre, :codigo_youtube, :presence => true
   
   alias_attribute :to_s, :nombre
+
+  def thumbnail_url
+    'http://img.youtube.com/vi/' + codigo + '/default.jpg'
+  end
 end

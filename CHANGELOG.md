@@ -1,3 +1,12 @@
+## v1.0.1
+
+1- Eliminado Xexcepciones y Sortable.
+2- Eliminado views/application/_slide.
+4- Show de contacto usa formato nuevo.
+5- Eliminado action "secciones#index".
+6- Agregado thumbnail_url a video.
+7- Agregado método mensaje en ApplicationController
+
 ## v1.0.0.pre
 
 * Assets:

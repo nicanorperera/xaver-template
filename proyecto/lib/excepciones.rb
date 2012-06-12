@@ -6,7 +6,7 @@ module Excepciones
   end
 
   def access_denied(excepcion)
-    redirect_to sesiones_path, alert: excepcion.message
+    redirect_to root_path, alert: excepcion.message
   end
 
   def record_invalid(excepcion)

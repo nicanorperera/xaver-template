@@ -7,6 +7,5 @@
 
   <div class="controls">
     <%= f.button :submit, :name => nil, :disable_with => t("espere"), :class => 'btn btn-primary' %>
-    <%= link_to "Cancelar", can?(:index, Usuario) ? admin_usuarios_path : sesiones_path, :class => 'btn' %>
   </div>
 <% end %>

@@ -2,11 +2,7 @@
   <h1>Consulta recibida el <%= l @consulta.created_at %></h1>
 </div>
 
-<nav class="well">
-  <%= link_to "Volver", admin_consultas_path, :class => 'btn' %>
-</nav>
-
-<table class="table table-striped table-bordered">
+<table class="table table-striped">
   <tbody>
     
     <tr>
@@ -33,11 +29,10 @@
       <th>Localidad</th>
       <td><%= @consulta.localidad %></td>
     </tr>
-    
-    <tr>
-      <th>Mensaje</th>
-      <td><%= @consulta.mensaje %></td>
-    </tr>
-    
+       
   </tbody>
 </table>
+<div class="well">
+  <h1>Mensaje:</h1>
+  <%= @consulta.mensaje %>
+</div>

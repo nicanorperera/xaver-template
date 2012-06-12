@@ -1,4 +1,4 @@
-<%= simple_form_for Usuario.new, :url => sesiones_path do |f| %>
+<%= simple_form_for Usuario.new, :html => {:style => 'color:#444;'}, :url => sesiones_path do |f| %>
   <%= f.input :username, :autofocus => true %>
   <%= f.input :password %>
 

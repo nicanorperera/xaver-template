@@ -1,3 +1,10 @@
+## v1.0.2
+
+1- Cambiado 'mensaje' por 'notice' en admin_usuarios_controller
+2- Eliminado metodo mensaje de admin_fotos_controller y admin_videos_controller
+3- Container-Fluid en AdminController
+4- Agregado Style con letras oscuras a sesiones/_form. (En Bootstrap 2.0.4 las letras se ven blancas).
+
 ## v1.0.1
 
 1- Eliminado Xexcepciones y Sortable.

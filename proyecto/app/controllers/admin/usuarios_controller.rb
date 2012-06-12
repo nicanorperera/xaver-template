@@ -31,7 +31,7 @@ class Admin::UsuariosController < Admin::AdminController
     notice = mensaje
 
     respond_to do |format|
-      format.html { redirect_to admin_usuarios_path, notice: mensaje }
+      format.html { redirect_to admin_usuarios_path, notice: notice }
       format.js
     end
   end

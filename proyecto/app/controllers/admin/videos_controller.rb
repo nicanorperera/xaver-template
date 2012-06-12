@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class Admin::VideosController < Admin::AdminController
   load_and_authorize_resource
-  include Sortable
+  include Ordenable
 
   def index
     @video = Video.new
@@ -41,11 +41,6 @@ class Admin::VideosController < Admin::AdminController
   end
   
   private
-
-  def mensaje
-    flash.now.notice = t("notice.#{action_name}")
-  end
-
   def sort_coleccion
     Video.all
   end

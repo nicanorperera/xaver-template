@@ -1,3 +1,9 @@
+## v1.0.3
+
+1- Cambiado fixed por fluid en su totalidad
+2- Usuario ahora con Destroy nuevo
+3- Header del index de Usuario nuevo
+
 ## v1.0.2
 
 1- Cambiado 'mensaje' por 'notice' en admin_usuarios_controller

@@ -1,8 +1,8 @@
 <div class="page-header">
-  <div class="row">
-    <div class="span6"><h1>Usuarios</h1></div>
-    <div class="span3" style="text-align:right;"><%= link_to icono('plus', :blanco) + " Agregar usuario", new_admin_usuario_path, :class => 'btn btn-primary btn-large' %></div>
-  </div>
+  <nav class="pull-right">
+    <%= link_to icono('plus', :blanco) + " Agregar usuario", new_admin_usuario_path, :class => 'btn btn-primary btn-large' %>
+  </nav>
+  <h1>Usuarios</h1>
 </div>
 
 <table id="listado" class="table table-striped">

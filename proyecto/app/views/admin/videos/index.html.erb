@@ -1,10 +1,9 @@
 <div class="page-header">
+  <nav class="pull-right">
+    <%= link_to icono('plus', :blanco) + " Agregar video", new_admin_video_path, :class => 'btn btn-primary btn-large' %>
+  </nav>
   <h1>Videos</h1>
 </div>
-
-<nav class="well">
-  <%= link_to icono('plus', :blanco) + " Agregar video", new_admin_video_path, :class => 'btn btn-primary' %>
-</nav>
 
 <%= content_tag :table, :id => :listado, :class => [:table, :"table-striped", :ordenable] do %>
   <%= thead :nombre, :acciones %>

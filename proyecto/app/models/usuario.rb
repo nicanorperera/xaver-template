@@ -24,6 +24,15 @@ class Usuario < ActiveRecord::Base
     end
   end
 
+  def se_puede_eliminar?
+    # No se pueden eliminar usuarios
+    false
+  end
+  
+  def destroy
+    super if se_puede_eliminar?
+  end
+
   alias_attribute :to_s, :username
 
 end

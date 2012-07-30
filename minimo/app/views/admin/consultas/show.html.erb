@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h1>Consulta recibida el <%= l @consulta.created_at %></h1>
+</div>
+
+<table class="table table-striped">
+  <tbody>
+    
+    <tr>
+      <th>Nombre y apellido</th>
+      <td><%= @consulta.nombre_completo %></td>
+    </tr>
+    
+    <tr>
+      <th>Teléfono</th>
+      <td><%= @consulta.telefono %></td>
+    </tr>
+    
+    <tr>
+      <th>Correo electrónico</th>
+      <td><%= @consulta.email %></td>
+    </tr>
+    
+    <tr>
+      <th>Dirección</th>
+      <td><%= @consulta.direccion %></td>
+    </tr>
+    
+    <tr>
+      <th>Localidad</th>
+      <td><%= @consulta.localidad %></td>
+    </tr>
+       
+  </tbody>
+</table>
+<div class="well">
+  <h1>Mensaje:</h1>
+  <%= @consulta.mensaje %>
+</div>

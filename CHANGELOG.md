@@ -1,3 +1,14 @@
+## v1.1.0
+1- Nuevo template Base => minimo.rb
+
+Características: 
+
+* Solo carga los modulos necesarios. 
+* Más rápido. Menos carpetas.
+* Login con email.
+* Rediseño de layout.
+* Refactoring general.
+
 ## v1.0.3
 
 1- Cambiado fixed por fluid en su totalidad

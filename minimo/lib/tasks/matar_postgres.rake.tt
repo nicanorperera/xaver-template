@@ -1,0 +1,17 @@
+# -*- encoding : utf-8 -*-
+namespace :matar do
+  
+  task :postgres => :environment do
+    bdd = "<%= app_name %>"
+    sh = <<EOF
+ps xa \
+  | grep postgres: \
+  | grep #{bdd} \
+  | grep -v grep \
+  | awk '{print $1}' \
+  | xargs sudo kill
+EOF
+    puts `#{sh}`
+  end
+ 
+end

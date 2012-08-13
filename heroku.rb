@@ -6,11 +6,6 @@ git :commit => "-m 'Commit Inicial'"
 
 run "heroku create #{@app_name} --stack cedar"
 
-# Para que funcionen los assets en Rails 3.2.1. Esta dos veces porque así lo dispuso Gius.
-run 'heroku plugins:install http://github.com/heroku/heroku-labs.git'
-run 'heroku plugins:install http://github.com/heroku/heroku-labs.git'
-run 'heroku labs:enable user_env_compile'
-
 git :push => 'heroku master'
 
 # Descomentar las lineas que crea necesarias.

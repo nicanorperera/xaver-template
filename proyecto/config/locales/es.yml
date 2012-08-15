@@ -8,6 +8,7 @@ es:
     destroy: "El elemento ha sido eliminado."
     sesion_iniciada: "Has iniciado sesión"
     reordenar: "Los elementos se han reordenado"
+    consulta_enviada: "Su consulta fue enviada con éxito"
   alert:
     debe_autenticarse: "Primero debe autenticarse para tener acceso."
     sesion_no_iniciada: "El usuario y/o la contraseña no son válidos. Por favor reintente!"

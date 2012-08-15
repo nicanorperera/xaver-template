@@ -8,6 +8,7 @@ es:
     destroy: "El elemento ha sido eliminado."
     sesion_iniciada: "Has iniciado sesión"
     reordenar: "Los elementos se han reordenado"
+    consulta_enviada: "Su consulta fue enviada con éxito"
   simple_form:
     "yes": 'Sí'
     "no": 'No'

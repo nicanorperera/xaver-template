@@ -1,5 +1,8 @@
+## v1.2.0
+1- Nuevo template Documentado => documentado.rb
+
 ## v1.1.0
-1- Nuevo template Base => minimo.rb
+1- Nuevo template Base        => minimo.rb
 
 Características: 
 

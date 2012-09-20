@@ -1,0 +1,10 @@
+<%= simple_form_for usuario, :url => url, :html => { :class => 'form-horizontal', :autocomplete => "off" } do |f| %>
+  <%= f.input :email, :autofocus => true, :disabled => (!usuario.new_record?) %>
+  <%= f.input :rol, :as => :select, :collection => current_user.roles_que_puede_crear, :label_method => :humanize if can?(:manage, Usuario) && usuario.new_record? %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+
+  <div class="controls">
+    <%= f.button :submit, :name => nil, :data => {:disable_with => t("espere")}, :class => 'btn btn-primary' %>
+  </div>
+<% end %>

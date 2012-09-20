@@ -1,0 +1,5 @@
+@import 'bourbon';
+@import 'bootstrap_and_overrides';
+
+a.logo { float: right; width: 100px; height: 25px; margin: 7px 0px; background: image-url('xaver.png') no-repeat 0px 0px; @include transition(background-position 0.3s ease-in-out); }
+a.logo:hover { background-position: 0px -25px; }

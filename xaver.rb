@@ -1,11 +1,11 @@
-@raiz = File.expand_path(File.join(File.dirname(__FILE__)))
+@raiz     = File.expand_path(File.join(File.dirname(__FILE__)))
 @proyecto = File.join(@raiz, 'proyecto')
 @heroku   = File.join(@raiz, 'heroku.rb')
 
 @fecha ||= Time.now
 def fecha
- @fecha  += 1
- @fecha.utc.strftime("%Y%m%d%H%M%S")
+  @fecha  += 1
+  @fecha.utc.strftime("%Y%m%d%H%M%S")
 end
 
 remove_file "Gemfile"
@@ -17,7 +17,6 @@ remove_file "app/helpers/application_helper.rb"
 remove_file "app/views/layouts/application.html.erb"
 remove_file "app/controllers/application_controller.rb"
 
-remove_file "config/application.rb"
 remove_file "config/database.yml"
 remove_file "config/environments/production.rb"
 remove_file "config/initializers/inflections.rb"

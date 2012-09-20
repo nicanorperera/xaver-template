@@ -1,0 +1,6 @@
+<div class="hero-unit">
+  <h1>Bienvenido</h1>
+  <p>Por favor haga click en el botón para ingresar al sistema.</p>
+  <%= link_to 'Ingresar al Sistema', login_path      , :class => 'btn btn-large btn-primary' if !logged_in? %>
+  <%= link_to 'Administrar'        , admin_root_path , :class => 'btn btn-large btn-primary' if  logged_in? %>
+</div>

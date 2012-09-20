@@ -1,0 +1,42 @@
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.8'
+gem 'pg'
+gem 'dalli'
+gem 'jquery-rails'
+gem 'kaminari'
+gem 'meta_search'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
+  gem 'twitter-bootstrap-rails'
+  gem 'quiet_assets'
+end
+
+group :development do
+  gem 'letter_opener'
+  gem 'foldscaf'
+  gem 'magic_encoding'
+end
+
+group :production do
+  gem 'thin'
+  gem 'foreman'
+  gem 'exception_notification'
+end
+
+gem 'sorcery'
+gem 'simple_form'
+gem 'cancan'
+gem 'friendly_id'
+gem 'squeel'
+gem 'dragonfly'
+gem 'fog'
+gem 'bourbon'
+gem 'rack-cache', require: 'rack/cache'
+gem 'RedCloth'
+gem 'rack-rewrite'

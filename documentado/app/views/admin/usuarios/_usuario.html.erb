@@ -1,0 +1,7 @@
+<%= content_tag :tr, :id => "elementos_#{usuario.id}" do %>
+  <td><%= usuario.email %></td>
+  <td style="text-align:right;">
+    <%= link_to 'Editar', edit_admin_usuario_path(usuario), :class => 'btn btn-mini' if can? :editar, usuario %>
+    <%= link_to 'Eliminar', admin_usuario_path(usuario), :method => :delete, :data => { :confirm => t("confirmacion") }, :remote => true, :class => 'btn btn-mini btn-danger' if usuario.se_puede_eliminar? && can?(:destroy, usuario) %>
+  </td>
+<% end %>
